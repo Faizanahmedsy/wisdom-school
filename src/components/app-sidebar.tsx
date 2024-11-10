@@ -41,6 +41,7 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/constants/site-config";
 
 // This is sample data.
 const data = {
@@ -87,10 +88,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-[--radix-popper-anchor-width]">
                 <DropdownMenuItem>
-                  <span>Acme Inc</span>
+                  <span>{SITE_CONFIG.brandName} Inc</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span>Acme Corp.</span>
+                  <span>{SITE_CONFIG.brandName} Corp.</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
