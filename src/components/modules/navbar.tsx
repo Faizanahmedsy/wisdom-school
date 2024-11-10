@@ -11,8 +11,7 @@ export default function NavbarSection() {
         <div className="flex justify-between items-center gap-2 font-bold text-brand uppercase">
           <Earth size={45} />
           <div className="flex flex-col text-s">
-            <div>{SITE_CONFIG.brandName.split(" ")[0]}</div>
-            <div>{SITE_CONFIG.brandName.split(" ")[1]}</div>{" "}
+            <div>{SITE_CONFIG.brandName}</div>
           </div>
         </div>
         <div className="flex items-center">

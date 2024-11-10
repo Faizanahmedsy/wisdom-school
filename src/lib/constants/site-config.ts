@@ -1,5 +1,5 @@
 export const SITE_CONFIG = Object.freeze({
-  brandName: "Acme",
+  brandName: "Wisdom SChool",
   title: "My Site",
   cloneLink: "git clone https://github.com/Faizanahmedsy/kitty-start.git",
   description: "My site description",

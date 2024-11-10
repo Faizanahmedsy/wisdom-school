@@ -1,119 +1,188 @@
+import React from "react";
 import Link from "next/link";
+import { BookOpen, GraduationCap, Medal } from "lucide-react";
 
 export default function FooterSection() {
   return (
-    <footer className="bg-[#1e1e1e] text-white py-10 md:py-16">
-      <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="relative bg-gradient-to-b from-cyan-900 to-[#1e1e1e] text-white py-10 md:py-28 overflow-hidden">
+      {/* Background SVG Pattern */}
+      <svg
+        className="absolute inset-0 w-full h-full opacity-10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path
+            d="M 30 0 L 0 0 0 30"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="0.5"
+          />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+
+      {/* Flowing Lines SVG */}
+      <svg
+        className="absolute bottom-0 left-0 w-full  opacity-20 "
+        viewBox="0 0 1000 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,50 C150,20 350,80 500,50 C650,20 850,80 1000,50 L1000,100 L0,100 Z"
+          fill="currentColor"
+        >
+          <animate
+            attributeName="d"
+            dur="20s"
+            repeatCount="indefinite"
+            values="
+              M0,50 C150,20 350,80 500,50 C650,20 850,80 1000,50 L1000,100 L0,100 Z;
+              M0,50 C150,80 350,20 500,50 C650,80 850,20 1000,50 L1000,100 L0,100 Z;
+              M0,50 C150,20 350,80 500,50 C650,20 850,80 1000,50 L1000,100 L0,100 Z"
+          />
+        </path>
+      </svg>
+
+      <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
         <div className="flex flex-col gap-4">
-          <h3 className="text-lg font-bold">About</h3>
+          <h3 className="text-lg font-bold flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-cyan-400" />
+            About Wisdom School
+          </h3>
           <p className="text-sm text-gray-300">
-            We are a leading gaming tournament hosting platform, offering
-            reliable and high-performance servers for all your multiplayer
-            gaming needs.
+            Wisdom School is dedicated to providing transformative education
+            that focuses on practical life skills, personal growth, and
+            real-world knowledge that truly matters.
           </p>
           <div className="flex gap-4">
             <Link
               href="#"
-              className="text-sm hover:text-gray-400"
+              className="text-sm hover:text-cyan-400 transition-colors"
               prefetch={false}
             >
               <TwitterIcon className="w-5 h-5" />
             </Link>
             <Link
               href="#"
-              className="text-sm hover:text-gray-400"
+              className="text-sm hover:text-cyan-400 transition-colors"
               prefetch={false}
             >
-              <DiscIcon className="w-5 h-5" />
+              <LinkedInIcon className="w-5 h-5" />
             </Link>
             <Link
               href="#"
-              className="text-sm hover:text-gray-400"
+              className="text-sm hover:text-cyan-400 transition-colors"
               prefetch={false}
             >
               <YoutubeIcon className="w-5 h-5" />
             </Link>
           </div>
         </div>
+
         <div className="flex flex-col gap-4">
-          <h3 className="text-lg font-bold">Tournaments</h3>
+          <h3 className="text-lg font-bold flex items-center gap-2">
+            <GraduationCap className="w-5 h-5 text-cyan-400" />
+            Popular Courses
+          </h3>
           <ul className="space-y-2">
             <li>
               <Link
                 href="#"
-                className="text-sm hover:text-gray-400"
+                className="text-sm hover:text-cyan-400 transition-colors flex items-center gap-2"
                 prefetch={false}
               >
-                Minecraft Tournament
+                <Medal className="w-4 h-4" />
+                Personal Finance
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="text-sm hover:text-gray-400"
+                className="text-sm hover:text-cyan-400 transition-colors flex items-center gap-2"
                 prefetch={false}
               >
-                Rust Tournament
+                <Medal className="w-4 h-4" />
+                Critical Thinking
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="text-sm hover:text-gray-400"
+                className="text-sm hover:text-cyan-400 transition-colors flex items-center gap-2"
                 prefetch={false}
               >
-                Ark Tournament
+                <Medal className="w-4 h-4" />
+                Emotional Intelligence
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="text-sm hover:text-gray-400"
+                className="text-sm hover:text-cyan-400 transition-colors flex items-center gap-2"
                 prefetch={false}
               >
-                Valheim Tournament
+                <Medal className="w-4 h-4" />
+                Life Management
               </Link>
             </li>
           </ul>
         </div>
+
         <div className="flex flex-col gap-4">
-          <h3 className="text-lg font-bold">Contact</h3>
+          <h3 className="text-lg font-bold flex items-center gap-2">
+            <PhoneIcon className="w-5 h-5 text-cyan-400" />
+            Contact Us
+          </h3>
           <p className="text-sm text-gray-300">
-            Have a question or need help? Get in touch with our support team.
+            Have questions about our courses or need guidance? Our education
+            advisors are here to help.
           </p>
           <div className="flex flex-col gap-2">
             <Link
               href="#"
-              className="text-sm hover:text-gray-400"
+              className="text-sm hover:text-cyan-400 transition-colors"
               prefetch={false}
             >
               <MailIcon className="w-5 h-5 mr-2 inline-block" />
-              support@gamingtournaments.com
+              contact@wisdomschool.edu
             </Link>
             <Link
               href="#"
-              className="text-sm hover:text-gray-400"
+              className="text-sm hover:text-cyan-400 transition-colors"
               prefetch={false}
             >
               <PhoneIcon className="w-5 h-5 mr-2 inline-block" />
-              +1 (234) 567-890
+              +1 (555) 123-4567
             </Link>
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 md:px-6 mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-between">
+
+      <div className="container mx-auto px-4 md:px-6 mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-between relative z-10">
         <p className="text-sm text-gray-400">
-          &copy; 2024 Gaming Tournaments. All rights reserved.
+          &copy; {new Date().getFullYear()} Wisdom School. All rights reserved.
         </p>
         <nav className="flex gap-4 md:gap-6 text-sm text-gray-400">
-          <Link href="#" className="hover:text-gray-300" prefetch={false}>
+          <Link
+            href="#"
+            className="hover:text-cyan-400 transition-colors"
+            prefetch={false}
+          >
             Privacy Policy
           </Link>
-          <Link href="#" className="hover:text-gray-300" prefetch={false}>
+          <Link
+            href="#"
+            className="hover:text-cyan-400 transition-colors"
+            prefetch={false}
+          >
             Terms of Service
           </Link>
-          <Link href="#" className="hover:text-gray-300" prefetch={false}>
-            Cookie Policy
+          <Link
+            href="#"
+            className="hover:text-cyan-400 transition-colors"
+            prefetch={false}
+          >
+            Student Guidelines
           </Link>
         </nav>
       </div>
@@ -121,7 +190,7 @@ export default function FooterSection() {
   );
 }
 
-function DiscIcon(props: any) {
+function LinkedInIcon(props: any) {
   return (
     <svg
       {...props}
@@ -135,12 +204,14 @@ function DiscIcon(props: any) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="2" />
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
     </svg>
   );
 }
 
+// Reuse the other icon components from your original code
 function MailIcon(props: any) {
   return (
     <svg

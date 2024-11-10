@@ -80,7 +80,7 @@ export default function CourseCard({ course }: CourseCardProps) {
     <>
       <Card
         className={cn(
-          "cursor-pointer transition-all hover:scale-105 hover:shadow-lg",
+          "cursor-pointer transition-all hover:scale-105 hover:shadow-lg rounded-[2rem]",
           progress.completed && "border-green-500"
         )}
         onClick={() => setIsOpen(true)}

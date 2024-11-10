@@ -6,13 +6,13 @@ import { courses } from "../data/courses";
 export default function CourseSection() {
   return (
     <>
-      <main className="min-h-screen bg-background p-8">
+      <main className="min-h-screen bg-blue-900 p-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
-            <GraduationCap className="h-12 w-12 text-primary" />
+            <GraduationCap className="h-12 w-12 text-blue-200" />
             <div>
               {/* <h1 className="text-4xl font-bold text-primary">Wisdom School</h1> */}
-              <p className="text-muted-foreground">
+              <p className="text-blue-200 text-2xl font-poppins font-medium">
                 Essential life skills for everyone
               </p>
             </div>
