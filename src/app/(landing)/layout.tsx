@@ -1,13 +1,7 @@
-import { Inter as FontSans } from "next/font/google";
 import "./../custom.css";
 import "./../globals.css";
 
 import { FooterSection, NavbarSection } from "@/components";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export default function LandingRootLayout({
   children,

@@ -1,20 +1,32 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans, Poppins } from "next/font/google";
+import {
+  Inter as FontSans,
+  Inter,
+  Lexend,
+  Outfit,
+  Poppins,
+  Quicksand,
+  Work_Sans,
+} from "next/font/google";
 import "./custom.css";
 import "./globals.css";
 import { FooterSection, NavbarSection, Providers } from "@/components";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
 });
+
+const lexend = Lexend({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
+//lexend
+
+// quick Sand
 
 export const metadata: Metadata = {
   title: "Kitty Start",
@@ -30,9 +42,9 @@ export default function LandingRootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased light",
-          fontSans.variable,
-          poppins.variable
+          "min-h-screen bg-background antialiased light",
+          poppins.variable,
+          lexend.className
         )}
       >
         <Providers>{children}</Providers>

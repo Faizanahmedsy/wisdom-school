@@ -11,7 +11,7 @@ export default function CourseSection() {
           <div className="flex items-center gap-4 mb-12">
             <GraduationCap className="h-12 w-12 text-primary" />
             <div>
-              <h1 className="text-4xl font-bold text-primary">Wisdom School</h1>
+              {/* <h1 className="text-4xl font-bold text-primary">Wisdom School</h1> */}
               <p className="text-muted-foreground">
                 Essential life skills for everyone
               </p>
