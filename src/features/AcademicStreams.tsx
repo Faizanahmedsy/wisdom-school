@@ -194,7 +194,7 @@ const AcademicStreams: React.FC = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Choose your academic focus from our diverse streams. Major subjects
-            define your primary area of study, while you're free to select
+            define your primary area of study, while you&apos;re free to select
             additional subjects from any stream.
           </p>
         </div>
