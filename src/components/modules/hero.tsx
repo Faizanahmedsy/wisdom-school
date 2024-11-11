@@ -126,7 +126,7 @@ export default function HeroSection({}: Props) {
           </h1>
 
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Wisdom School is the world's only educational platform that teaches
+            Wisdom School is the world&lsquo;s only educational platform that teaches
             useful subjects
           </p>
 
